@@ -11,6 +11,7 @@ export const MintPublic = () => {
   const { requestTransaction, publicKey } = useWallet();
   const [receiverAddress, setReceiverAddress] = useState<string>('');
   const [amount, setAmount] = useState<number>(0);
+  const [feeAmount, setFeeAmount] = useState<number>(0);
 
   const handleMintPublic = async () => {
     const mint_public_transition = new Transition(
@@ -23,7 +24,7 @@ export const MintPublic = () => {
       publicKey!,
       WalletAdapterNetwork.Testnet,
       [mint_public_transition],
-      1000000, // set your desired fee
+      feeAmount, // set your desired fee
       false
     );
 
@@ -61,6 +62,14 @@ export const MintPublic = () => {
           type="number"
           placeholder="number"
           onChange={(e) => setAmount(Number(e.target.value))}
+        />
+      </Form.Group>
+      <Form.Group>
+        <Form.Label>Fee Amount:</Form.Label>
+        <Form.Control
+          type="number"
+          placeholder="number"
+          onChange={(e) => setFeeAmount(Number(e.target.value))}
         />
       </Form.Group>
       <Button onClick={handleMintPublic}>✨ Mint *Public* Token</Button>
