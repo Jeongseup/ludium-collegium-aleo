@@ -1,0 +1,9 @@
+// The program input for aleo_book_recommender/src/main.leo
+[main]
+book_publication_year: i32 = 32571i32;
+user_age: i32 = 32767i32;
+user_in_canada: i32 = 32767i32;
+user_in_italy: i32 = 0i32;
+user_in_spain: i32 = 0i32;
+user_in_united_kingdom: i32 = 0i32;
+user_in_usa: i32 = 0i32;

@@ -1,0 +1,5 @@
+book_publication_year,user_age,user_in_canada,user_in_italy,user_in_spain,user_in_united_kingdom,user_in_usa,liked
+0.998004987531172,0.09205020920502091,False,False,False,False,True,0
+0.9905236907730672,0.07531380753138074,False,False,False,False,True,1
+0.996508728179551,0.13403738283605268,True,False,False,False,False,0
+0.997506234413965,0.10460251046025104,False,False,False,False,True,0
