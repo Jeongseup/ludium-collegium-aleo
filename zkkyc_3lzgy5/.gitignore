@@ -1,0 +1,6 @@
+.env
+*.avm
+*.prover
+*.verifier
+outputs/
+.ipynb_checkpoints/
