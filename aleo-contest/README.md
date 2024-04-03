@@ -227,3 +227,56 @@ https://github.com/pjhnocegood/polygon-id/blob/main/on-chain-verification/contra
 PoyglonID APP을 통하여 스캔 후 ZK proof를 만들어 트랜잭션을 발생 시킵니다. image image image image
 
 ```
+
+## 알레오 콘테스트 3주차 
+
+https://zpass.docs.aleo.org/workflow-guide/on-chain-workflow 를 바탕으로 만들자!
+
+0. Request VC from User
+원래는 Auth가 필요한데 일단 생략
+
+
+
+1. VC 만드는 것(issuer node api)
+
+
+{
+Issuer : 루디움 퍼블릭 어드레스
+Subject : Holder(교육생) Aleo Public address
+Attribute
+    - Date of Birth
+    - Nationality
+    - Expiration
+
+rust code : https://zpass.docs.aleo.org/fundamentals/issuer/generate-credential
+}
+
+2. Hash credential
+
+message를 가지고 hash로 만들어서 리턴
+
+3. sign credential -> 일단 그냥 안된다고 생각하고 ㄱㄱ
+
+private key : ludium key
+message : hash
+
+-> signature
+
+--
+유저가 request mint vc를 하면
+이슈어가 확인하고 hash credential로 만들어서 (사인하고) 유저한테 맵핑
+
+--
+유저는 map get 으로 부여된거 확인 ㄱ
+
+-- verfier 프로그램에는 input으로
+
+hash credential
+verify signature
+
+verify owner
+
+verfiy claims
+output result
+
+verify 되면 ㅇㅋ 체크
